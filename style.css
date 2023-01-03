@@ -1,0 +1,518 @@
+/* Inhoudsopgave
+   
+   1. Algemene style
+
+   2. Main
+    2.1 index.html
+    2.2 tips.html
+    2.3 favorites.html
+    2.4 routes.html
+    2.5 route_history.html
+    2.6 17th century_route.html
+    2.7 hotspot1.html
+    2.8 map.html
+
+   3. Footer
+
+*/
+
+
+/* =================
+   1. Algemene style 
+   ================= */
+
+   @font-face {
+    font-family: 'FilsonPro';
+    src: url('../assets/FilsonProRegular.otf');
+    font-style: normal;
+    font-weight: 300;
+  }
+  
+  @font-face {
+      font-family: 'AcuminVariable';
+      src: url('../assets/AcuminVariableConcept.otf');
+      font-style: normal;
+      font-weight: 300;
+  }
+  
+*, html {
+    padding: 0em;
+    margin: 0em;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFFFFF;
+    margin: 5vh 5vw 5vh 5vw;
+    font-family: 'AcuminVariable', sans-serif;
+    font-size: 1rem;
+    color: #6D6F71;
+}
+
+main {
+    margin-bottom: 8.5em;
+}
+
+h1 {
+    font-family: 'FilsonPro', sans-serif;   
+    font-size: 1.5rem;
+    color: white;
+    background-color: #84BF7A;
+    width: 100%;
+    font-weight: 700; 
+    margin-bottom: 1em;
+    border-radius: .3em;
+    padding: .5em;
+    margin-top: -1.5em;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'FilsonPro', sans-serif;   
+    font-size: 1.5rem;
+    color: #7bb372;
+    text-transform: uppercase;
+    padding: .3em;
+    border-bottom: .2em solid #75aa6b;
+    font-weight: 700; 
+    width: 100%;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+h3 {
+    font-family: 'FilsonPro', sans-serif;   
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-left: -.5em;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    font-family: 'FilsonPro', sans-serif;   
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900; 
+    background-color: #F27457;
+    padding: .5em;
+    border-radius: .3em;
+    border: none;
+    box-shadow: .08em .08em .3em #41211a;
+    max-width: 8em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =================
+   2. Main
+   ================= */
+
+/* 2.1 index.html */
+
+#video { 
+    width: 22em;
+    height: 22em;
+    margin-left: -.6em;
+    /*Ik vind het een leuk idee om bij het opstarten van de app het wiel in het logo te laten draaien. Je ziet in dit prototype 
+    helaas wel een licht kader om de video heen. Ik weet niet goed hoe dat komt en het lukte me niet dat weg te halen.*/
+}
+
+#decoration {
+    width: 3.3em;
+    height: 3.3em;
+    margin-top: -1em;
+    display: flex;
+    flex-direction: row;
+    gap: 14.5em;
+}
+
+#findroute-button {
+    margin-left: 3.5em;
+    margin-top: -5em;
+    animation: expand 1.5s
+}
+
+@keyframes expand {
+
+    0% { transform: scale(1);
+       
+    }
+    
+    50% { transform: scale(1.15);
+         
+    }
+
+    100% { transform: scale(1);
+
+    }
+}
+
+#home-p { 
+    margin-top: 1.5em;
+    margin-left: .7em;
+} 
+
+/* 2.2 tips.html */
+
+.toppage {
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    flex-direction: row;
+    gap: 17em;
+    margin-left: .5em;
+}
+
+#h1-tips {
+    background-color: #a1d7e4;
+}
+
+.tips {
+    margin-bottom: 1.5em;
+}
+
+#tips-list {
+    padding: 1.5em;
+    margin-top: -1.5em;
+}
+
+
+/* 2.3 favorites.html */
+
+#h1-favo {
+    background-color: #a98cd1;
+}
+
+#favo {
+    width: 12em;
+    height: 12em;
+    display: flex;
+    flex-direction: row;
+    margin-left: -1.65em;
+    animation: omhoog 2s;
+}
+
+.captions {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    margin-top: -1.3em;
+    margin-left: 3em;
+    animation: omhoog 2s;
+}
+
+@keyframes omhoog {
+    0% {
+        transform: translateY(3em);
+    }
+
+    100% {
+        transform: translateY(0em);
+    }
+}
+
+
+/* 2.4 routes.html */
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5em;
+    list-style: none;
+    margin-top: 2em;
+    
+}
+
+.categories a {
+    padding: 1em;
+    text-align:center;
+    font-size: 1.5rem;
+    display: block;
+    width: 6.8em;
+    height: 4em;
+}
+
+.categories li {
+    border-radius: .3em;
+    box-shadow: .08em .08em .3em #22311f;
+    animation: verschijnen 1s;
+}
+
+.categories li:nth-of-type(1) {
+    background-color: #F27457;
+}
+    
+.categories li:nth-of-type(2) {
+    background-color: #F2E5A2;
+}
+    
+.categories li:nth-of-type(3) {
+    background-color: #84BF7A;
+}
+    
+.categories li:nth-of-type(4) {
+    background-color: #a98cd1;
+}
+
+.categories li:nth-of-type(5) {
+    background-color: #ACE5F2;
+}
+
+@keyframes verschijnen {
+  
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* 2.5 routes_history.html */
+
+#backbutton {
+    width: 2em;
+    height: 2em;
+}
+
+.history-categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5em;
+    margin-top: 3em;
+    list-style: none;
+}
+
+.history-categories a {
+    padding: 1em;
+    text-align:center;
+    font-size: 1.5rem;
+    display: block;
+    width: 6.8em;
+    height: 4em;
+}
+
+.history-categories li {
+    border-radius: .3em;
+    box-shadow: .08em .08em .3em #22311f;
+    animation: verschijnen 1s;
+}
+
+.history-categories li:nth-of-type(1) {
+background-color: #F27457;
+}
+
+.history-categories li:nth-of-type(2) {
+    background-color: #F2E5A2;
+}
+
+.history-categories li:nth-of-type(3) {
+background-color: #a98cd1;
+}
+
+.history-categories li:nth-of-type(4) {
+    background-color: #ACE5F2;
+}
+
+.history-categories img {
+    width: .8em;
+    height: .8em;
+}
+
+.history-categories p {
+    color: white;
+    font-weight: lighter;
+    font-size: .8em;
+}
+
+.duration {
+    display: flex;
+    flex-direction: row;
+    gap: .3em;
+    justify-content: center;
+}
+
+
+/* 2.6 17th century_route.html */
+
+.h1-17thcentury {
+    background-color: #F27457;
+}
+
+.h2-color {
+    color: #F27457;
+    border-bottom: .2em solid #F27457;
+}
+
+#startroute-button {
+    margin-left: 3.3em;
+    position: fixed;
+    bottom: 0;
+    transform: translateY(-4.5em);
+}
+
+#details {
+    margin-left: 1em;
+    list-style: none;
+}
+
+#details-p {
+    padding: .5em;
+}
+
+.icons {
+    width: 1.5em;
+    height: 1.5em;    
+}
+
+.iconsandinfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5em;
+    margin-bottom: .5em;
+}
+
+
+/* 2.7 hotspot1.html */
+
+#courtyard {
+    position: absolute;
+    width: 21em;
+}
+
+.checker {
+    display: block;
+    width: 3.5em;
+    height: 3.5em;
+    background-image: url("../images/Asset\ 40heart-off.svg");
+    background-repeat: no-repeat;
+    position: relative;
+    transform: translate(16.5em, .5em);
+}
+
+#trigger:checked + .checker {
+    background-image: url("../images/Asset\ 41like.svg");
+}
+
+#trigger {
+    display: none;
+}
+
+#location {
+    display: flex;
+    flex-direction: row;
+    gap: .3em;
+    margin-top: 11em;
+}
+
+#location-icon {
+    width: 1.5em;
+    height: 1.5em;
+    margin-bottom: 1em;
+}
+
+#mapandbutton {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5em;
+}
+
+#small-map {
+    min-width: 6em;
+    min-height: 6em;
+}
+
+#speaker {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+
+/* 2.8 map.html */
+
+#kruisje {
+    width: 2em;
+    height: 2em;
+    margin-left: 19em;
+}
+
+#map-body {
+    background-image: url("../images/Asset\ 32@routekaart1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* =================
+   3. Footer 
+   ================= */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-bottom: 1em;
+    margin-left: -.5em;
+}
+
+nav img {
+    display: block;
+    width: 4em;
+    height: 4em;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav a {
+    text-align: center;
+    display: block;
+    min-width: 6em;
+    padding: .5em 1em .5em;
+}
+
+nav li:nth-of-type(1) {
+    background-color: #F2E5A2;
+}
+
+nav li:nth-of-type(2) {
+    background-color: #ACE5F2;
+}
+
+nav li:nth-of-type(3) {
+    background-color: #95d689;
+}
+
+nav li:nth-of-type(4) {
+    background-color: #b598df;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'FilsonPro', sans-serif; 
+    font-weight: 900;
+    color: #F27457;
+}
+
+.huidgepagina {
+    box-shadow: .08em .08em .3em #41211a;
+}
